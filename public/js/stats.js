@@ -1,3 +1,7 @@
+let lineChart;
+let barChart;
+let pieChart;
+let donutChart;
 
 fetch("/api/workouts/range")
   .then(response => {
@@ -32,6 +36,7 @@ API.getWorkoutsInRange()
 
   return arr;
   }
+
 function populateChart(data) {
   let durations = duration(data);
   let pounds = calculateTotalWeight(data);
@@ -43,7 +48,7 @@ function populateChart(data) {
   let pie = document.querySelector("#canvas3").getContext("2d");
   let pie2 = document.querySelector("#canvas4").getContext("2d");
 
-  let lineChart = new Chart(line, {
+  lineChart = new Chart(line, {
     type: "line",
     data: {
       labels: [
@@ -91,7 +96,7 @@ function populateChart(data) {
     }
   });
 
-  let barChart = new Chart(bar, {
+  barChart = new Chart(bar, {
     type: "bar",
     data: {
       labels: [
@@ -144,7 +149,7 @@ function populateChart(data) {
     }
   });
 
-  let pieChart = new Chart(pie, {
+  pieChart = new Chart(pie, {
     type: "pie",
     data: {
       labels: workouts,
@@ -164,7 +169,7 @@ function populateChart(data) {
     }
   });
 
-  let donutChart = new Chart(pie2, {
+  donutChart = new Chart(pie2, {
     type: "doughnut",
     data: {
       labels: workouts,
@@ -217,6 +222,6 @@ function workoutNames(data) {
       workouts.push(exercise.name);
     });
   });
-  
+
   return workouts;
 }
