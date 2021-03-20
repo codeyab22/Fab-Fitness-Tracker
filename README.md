@@ -26,3 +26,14 @@ Here is the repo to the link: https://github.com/codeyab22/Fab-Fitness-Tracker
 # Link of the Deployed Website
 
 https://fab-fitness-tracker.herokuapp.com/
+
+
+# Licenses
+
+MIT
+
+# Authors
+
+Only Adia 
+
+
