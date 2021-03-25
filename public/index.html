@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <title>Fitness Chart</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Fitness Tracker</title>
+</head>
+
+<body>
+  <!-- Nav bar -->
   <nav>
-    <a href="/">Fab Fitness Tracker</a>
-  </nav>
-  <body>
-    <div class="container mt">
-      <h1 class="text-center">Fab Workout Dashboard</h1>
-      <div class="row mt">
-        <div class="col-md-6">
-          <canvas id="canvas"></canvas>
-        </div>
-        <div class="col-md-6">
-          <canvas id="canvas2"></canvas>
-        </div>
+    <div class="ui secondary menu navmenu">
+      <a class= "item navitem" href="/">Fitness Tracker</a>    
+      <div class="right menu">
+        <a class = "ui item navitem" href="/stats">Dashboard</a>
       </div>
-      <div class="row mt">
-        <div class="col-md-6">
-          <canvas id="canvas3"></canvas>
+    </div>
+  </nav>
+  <!-- Workout Details -->
+  <div class="wrapper workout">
+    <header>
+      <h1 class="ui violet header">Fitness Tracker</h1>
+    </header>
+    <div class="ui container workout">
+      <div class="ui raised card m-auto">
+        <!-- Workout Summary -->
+        <div class="prev-workout">
+          <h3>Last Workout</h3>
+          <div>
+            <div class="workout-stats"></div>
+            <div class="buttons">
+              <a id="continue-btn" href="/exercise?" class="huge ui blue button">Continue Workout</a>
+              <a href="/exercise" class="huge positive ui button">New Workout</a>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6">
-          <canvas id="canvas4"></canvas>
+        <div class="new-workout">
+          <h3>Create Your First Workout</h3>
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="/js/api.js"></script>
-    <script src="/js/stats.js"></script>
-  </body>
-</html>
+  </div>
+  </div>
+  <div id="toast">
+    Workout Added Successfully!
+  </div>
+  <script src="./js/api.js"></script>
+  <script src="./js/workout.js"></script>
+  <script src="./js/index.js"></script>
+</body>
 
+</html>
