@@ -3,7 +3,7 @@
 # About this project
 
 this is the most recent project is Fab fitness tracker. With the support of Mongodb, it is tracker app to track the exercises to complete. They can add 
-or remove the tasks of the exercises that they choose. The Fab-Fitness-Tracker allows the users to pick the exercises and ensure that they watch 
+or remove the tasks of the exercises that they choose. The Fab-Fitness-Tracker allows the users to pick the exercises and ensure that they record
 what they accomplish. 
 
 # User's Story
@@ -12,7 +12,7 @@ this user  wants to watch her exercises and what he/she completed his/her goals.
 # Motivation(s)
 
 THe motivation is to be flexible and gain  knowledge of working with MongoDB Altas and technologies. 
-Another motivation is define what I want to do with the users goals
+Another motivation is define what I want to do with the users goals. 
 
 
 # Link of the Repository
